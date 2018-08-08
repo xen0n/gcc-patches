@@ -63,10 +63,10 @@ rm -f gcc-${gver}-*.tar.bz2
 
 # standard jobbies
 mkdir -p tmp/patch/exclude tmp/uclibc tmp/piepatch tmp/specs
-[[ -n ${PATCH_VER}  ]] && cp ${gver}/gentoo/*.patch ../README* tmp/patch/
+[[ -n ${PATCH_VER}  ]] && cp ${gver}/gentoo/*.patch README.Gentoo.patches tmp/patch/
 [[ -d ${gver}/man   ]] && cp -r ${gver}/man tmp/
-[[ -n ${UCLIBC_VER} ]] && cp -r ${gver}/uclibc/* ../README* tmp/uclibc/
-[[ -n ${PIE_VER}    ]] && cp -r ${gver}/pie/* ../README* tmp/piepatch/
+[[ -n ${UCLIBC_VER} ]] && cp -r ${gver}/uclibc/* README.Gentoo.patches tmp/uclibc/
+[[ -n ${PIE_VER}    ]] && cp -r ${gver}/pie/* README.Gentoo.patches tmp/piepatch/
 [[ -n ${PP_VER}     ]] && cp -r ${gver}/ssp tmp/
 [[ -n ${SPECS_VER}  ]] && cp -r ${SPECS_GCC_VER:-${gver}}/specs/* tmp/specs/
 # extra cruft
