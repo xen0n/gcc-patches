@@ -1,6 +1,7 @@
 1.1		TODO
 	+ 98_all_sh_textrel-on-libitm.patch
 	+ 99_all_m68k-textrel-on-libgcc.patch
+	+ 100_all-isl-include.patch
 1.0		08 Aug 2018
 	+ 95_all_ia64-TEXTREL.patch
 	+ 97_all_disable-systemtap-switch.patch
