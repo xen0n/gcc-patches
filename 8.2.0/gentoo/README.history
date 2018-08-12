@@ -1,4 +1,4 @@
-1.1		TODO
+1.1		12 Aug 2018
 	+ 98_all_sh_textrel-on-libitm.patch
 	+ 99_all_m68k-textrel-on-libgcc.patch
 	+ 100_all-isl-include.patch
