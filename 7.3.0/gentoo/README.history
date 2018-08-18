@@ -1,3 +1,5 @@
+1.6		18 Aug 2018
+	+ 97_all_isl-include.patch
 1.5		17 Aug 2018
 	+ 94_all_libgo-remove-ustat.h-glibc-2.28.patch
 	+ 95_all_libsanitizer-avoidustat.h-glibc-2.28-part-1.patch
