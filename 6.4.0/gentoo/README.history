@@ -1,3 +1,5 @@
+1.6		18 Aug 2018
+	+ 100_all_isl-include.patch
 1.5		17 Aug 2018
 	+ 98_all_libsanitizer-avoidustat.h-glibc-2.28-part-1.patch
 	+ 99_all_libsanitizer-avoidustat.h-glibc-2.28-part-2.patch
