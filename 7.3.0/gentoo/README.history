@@ -1,6 +1,7 @@
 1.6		TODO
 	+ 98_all_msp430-partial-int.patch
 	+ 99_all_x32-fix-eh-return-address.patch
+	+ 100_all_respect-build-cxxflags.patch
 1.6		18 Aug 2018
 	+ 97_all_isl-include.patch
 1.5		17 Aug 2018
