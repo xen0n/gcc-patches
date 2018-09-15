@@ -1,5 +1,6 @@
 1.5		[pending]
 	+ 34_all_libjava-classpath-locale-sort.patch
+	+ 95_all_ucontext-to-ucontext_t.patch
 
 1.4		07 Aug 2015
 	+ 72_all_gcc-gperf-gnu-inline.patch
