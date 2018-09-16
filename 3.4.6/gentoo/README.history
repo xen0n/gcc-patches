@@ -1,5 +1,6 @@
 1.9		[pending]
 	- 00_all_gcc-trampolinewarn.patch
+	+ 91_all_ucontext-to-ucontext_t.patch
 
 1.8		06 Apr 2015
 	+ 10_all_gcc-3.4.6-c-parse-bison-3.patch
