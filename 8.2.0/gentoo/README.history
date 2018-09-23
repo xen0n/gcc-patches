@@ -1,4 +1,4 @@
-1.3		TODO
+1.3		23 Sep 2018
 	+ 101_all_x32-fix-eh-return-address.patch
 	+ 102_all_respect-build-cxxflags.patch
 	+ 103_all_mmix-fix-85666-p1.patch
