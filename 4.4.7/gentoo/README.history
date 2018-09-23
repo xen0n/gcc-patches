@@ -1,4 +1,4 @@
-1.4		[pending]
+1.4		23 Sep 2018
 	U 93_all_gcc-4.4-cloog-dl.patch
 	+ 97_all_ucontext-to-ucontext_t.patch
 
