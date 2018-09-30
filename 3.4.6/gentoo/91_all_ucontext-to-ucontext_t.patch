@@ -42,3 +42,25 @@ https://bugs.gentoo.org/664486
  	} *rt_ = (CONTEXT)->cfa;					\
  	sc_ = (struct sigcontext *) &rt_->uc.uc_mcontext;		\
        }									\
+--- a/gcc/config/sh/linux.h
++++ b/gcc/config/sh/linux.h
+@@ -251,7 +251,7 @@ do { \
+       {									\
+ 	struct rt_sigframe {						\
+ 	  siginfo_t info;						\
+-	  struct ucontext uc;						\
++	  ucontext_t uc;						\
+ 	} *rt_ = (CONTEXT)->cfa;					\
+ 	sc_ = (struct sigcontext *) &rt_->uc.uc_mcontext;		\
+       }									\
+--- a/libjava/include/x86_64-signal.h
++++ b/libjava/include/x86_64-signal.h
+@@ -40,7 +40,7 @@ do									     \
+   /* Advance the program counter so that it is after the start of the	     \
+      instruction:  the x86_64 exception handler expects			     \
+      the PC to point to the instruction after a call. */		     \
+-  struct ucontext *_uc = (struct ucontext *)_p;				     \
++  ucontext_t *_uc = (struct ucontext *)_p;				     \
+   volatile struct sigcontext *_sc = (struct sigcontext *) &_uc->uc_mcontext; \
+   _sc->rip += 2;							     \
+ }									     \
