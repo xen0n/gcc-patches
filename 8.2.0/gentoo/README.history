@@ -1,4 +1,4 @@
-1.4		TODO
+1.4		01 Oct 2018
 	+ 105_all_libgfortran-Werror.patch
 	+ 106_all_libgomp-Werror.patch
 	+ 107_all_libitm-Werror.patch
