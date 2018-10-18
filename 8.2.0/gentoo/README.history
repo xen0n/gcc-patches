@@ -1,5 +1,6 @@
 1.5		TODO
 	+ 111_all_ubd-hog-PR85704.patch
+	U 105_all_libgfortran-Werror.patch
 
 1.4		01 Oct 2018
 	+ 105_all_libgfortran-Werror.patch
