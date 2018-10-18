@@ -1,3 +1,12 @@
+1.8		TODO
+	+ 103_all_remove-lieee.patch
+	+ 104_all_libgfortran-Werror.patch
+	+ 105_all_libgomp-Werror.patch
+	+ 106_all_libitm-Werror.patch
+	+ 107_all_libatomic-Werror.patch
+	+ 108_all_libbacktrace-Werror.patch
+	+ 109_all_libsanitizer-libbacktrace-Werror.patch
+
 1.7		23 Sep 2018
 	+ 101_all_x32-fix-eh-return-address.patch
 	+ 102_all_respect-build-cxxflags.patch
