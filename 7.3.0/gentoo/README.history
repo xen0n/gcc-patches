@@ -1,5 +1,11 @@
 1.8		TODO
 	+ 101_all_remove-lieee.patch
+	+ 102_all_libgfortran-Werror.patch
+	+ 103_all_libgomp-Werror.patch
+	+ 104_all_libitm-Werror.patch
+	+ 105_all_libatomic-Werror.patch
+	+ 106_all_libbacktrace-Werror.patch
+	+ 107_all_libsanitizer-libbacktrace-Werror.patch
 
 1.7		23 Sep 2018
 	+ 98_all_msp430-partial-int.patch
