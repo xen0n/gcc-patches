@@ -1,3 +1,12 @@
+1.11		TODO
+	+ 100_all_libgfortran-Werror.patch
+	+ 101_all_libgomp-Werror.patch
+	+ 102_all_libitm-Werror.patch
+	+ 103_all_libatomic-Werror.patch
+	+ 104_all_libbacktrace-Werror.patch
+	+ 105_all_libsanitizer-libbacktrace-Werror.patch
+	+ 99_all_remove-lieee.patch
+
 1.10		23 Sep 2018
 	+ 98_all_respect-build-cxxflags.patch
 1.9		27 Aug 2018
