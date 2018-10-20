@@ -6,6 +6,7 @@
 	+ 105_all_libatomic-Werror.patch
 	+ 106_all_libbacktrace-Werror.patch
 	+ 107_all_libsanitizer-libbacktrace-Werror.patch
+	+ 108_all_libstdcxx-no-vtv.patch
 
 1.7		23 Sep 2018
 	+ 98_all_msp430-partial-int.patch
