@@ -6,6 +6,7 @@
 	+ 107_all_libatomic-Werror.patch
 	+ 108_all_libbacktrace-Werror.patch
 	+ 109_all_libsanitizer-libbacktrace-Werror.patch
+	+ 110_all_libstdcxx-no-vtv.patch
 
 1.7		23 Sep 2018
 	+ 101_all_x32-fix-eh-return-address.patch
