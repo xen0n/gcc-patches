@@ -2,6 +2,7 @@
 	+ 111_all_ubd-hog-PR85704.patch
 	U 105_all_libgfortran-Werror.patch
 	+ 112_all_libstdcxx-no-vtv.patch
+	+ 113_all_ICE-on-strncmp-PR87099.patch
 
 1.4		01 Oct 2018
 	+ 105_all_libgfortran-Werror.patch
