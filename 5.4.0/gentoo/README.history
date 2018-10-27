@@ -1,4 +1,4 @@
-1.11		TODO
+1.11		27 Oct 2018
 	+ 99_all_remove-lieee.patch
 	+ 100_all_libgfortran-Werror.patch
 	+ 101_all_libgomp-Werror.patch
