@@ -1,3 +1,6 @@
+1.6		TODO
+	U 10_all_default-fortify-source.patch
+
 1.5		27 Oct 2018
 	+ 111_all_ubd-hog-PR85704.patch
 	U 105_all_libgfortran-Werror.patch
