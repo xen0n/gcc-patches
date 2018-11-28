@@ -1,3 +1,7 @@
+1.6		TODO
+	+ 94_all_gcc-libgomp-no-werror.patch
+	+ 95_all_libjava-ucontext.patch
+
 1.5		23 Sep 2018
 	+ 93_all_ucontext-to-ucontext_t.patch
 
