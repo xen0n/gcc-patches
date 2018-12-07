@@ -1,4 +1,7 @@
-1.0		TODO
+1.1		TODO
+	U 01_all_default-fortify-source.patch
+
+1.0		[not released, a copy of 8.2.0]
 	+ 01_all_default-fortify-source.patch
 	+ 02_all_default-warn-format-security.patch
 	+ 03_all_default-warn-trampolines.patch
