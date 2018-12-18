@@ -1,5 +1,6 @@
 1.7		TODO
 	+ 114_all_kr-decl-PR88214.patch
+	+ 115_all_avx2-SIGSEGV-PR86871.patch
 
 1.6		01 Dec 2018
 	U 10_all_default-fortify-source.patch
