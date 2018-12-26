@@ -1,4 +1,4 @@
-1.7		TODO
+1.7		26 Dec 2018
 	+ 114_all_kr-decl-PR88214.patch
 	+ 115_all_avx2-SIGSEGV-PR86871.patch
 
