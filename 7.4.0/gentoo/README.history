@@ -1,8 +1,8 @@
-1.1		2 Feb 2019
+1.2		2 Feb 2019
 	U 01_all_default-fortify-source.patch
 	+ 21_all_kr-decl-PR88214.patch
 
-1.0		9 Dec 2018
+1.1		9 Dec 2018
 	+ 01_all_default-fortify-source.patch
 	+ 02_all_default-warn-format-security.patch
 	+ 03_all_default-warn-trampolines.patch
