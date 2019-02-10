@@ -19,7 +19,7 @@ On Hardened we add some options like -fstack-clash-protection and -z now
  
 +/* Default value for flag_clash_protector when flag_clash_protector is
 +   initialized to -1.  */
-+#ifdef ENABLE_ESP
++#ifdef EXTRA_OPTIONS
 +#define DEFAULT_FLAG_SCP 1
 +#endif
 +#ifndef DEFAULT_FLAG_SCP
