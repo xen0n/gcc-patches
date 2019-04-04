@@ -1,5 +1,6 @@
 1.1		TODO
 	+ 26_all_overridable_native.patch
+	+ 27_all_flto-make-all.patch
 
 1.0		22 Feb 2019
 	+ 01_all_default-fortify-source.patch
