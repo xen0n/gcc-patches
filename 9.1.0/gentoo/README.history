@@ -1,4 +1,4 @@
-1.0		TODO
+1.0		03 May 2019
 	+ 01_all_default-fortify-source.patch
 	+ 02_all_default-warn-format-security.patch
 	+ 03_all_default-warn-trampolines.patch
