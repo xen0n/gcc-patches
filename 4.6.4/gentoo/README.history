@@ -1,5 +1,6 @@
 1.5		TODO
 	+ 95_all_libjava-ucontext.patch
+	+ 96_all_gcc-gperf-gnu-inline.patch
 
 1.4		23 Sep 2018
 	- 10_all_default-fortify-source.patch
