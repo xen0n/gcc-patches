@@ -1,6 +1,7 @@
 1.5		TODO
 	+ 101_all_libjava-ucontext.patch
 	+ 102_all_cgraph_node-gcc-9.patch
+	+ 103_all_gcc-gperf-gnu-inline.patch
 
 1.4		23 Sep 2018
 	U 93_all_gcc-4.5-cloog-dl.patch
