@@ -1,4 +1,4 @@
-1.6		TODO
+1.6		1 Jun 2019
 	+ 94_all_gcc-libgomp-no-werror.patch
 	+ 95_all_libjava-ucontext.patch
 	+ 96_all_cgraph_node-gcc-9.patch
