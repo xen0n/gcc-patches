@@ -1,6 +1,7 @@
 1.1		TODO
 	+ 26_all_ipa-incomplete.patch
 	+ 27_all_es-po.patch
+	+ 28_all_disable-riscv32-ABIs.patch
 
 1.0		03 May 2019
 	+ 01_all_default-fortify-source.patch
