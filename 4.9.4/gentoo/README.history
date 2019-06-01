@@ -1,4 +1,4 @@
-1.4		TODO
+1.4		1 Jun 2019
 	+ 99_all_remove-lieee.patch
 	+ 100_all_avoid-ustat-glibc-2.28.patch
 	+ 101_all_libsanitizer-libbacktrace-Werror.patch
