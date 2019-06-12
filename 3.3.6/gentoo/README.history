@@ -1,3 +1,7 @@
+2		TODO
+	+ 93_all_gperf-inline.patch
+	+ 94_all_flag_jni.patch
+
 1.11		1 Jun 2019
 	+ 92_all_ucontext-to-ucontext_t.patch
 
