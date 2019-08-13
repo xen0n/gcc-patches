@@ -25,4 +25,3 @@
 	+ 24_all_libstdcxx-no-vtv.patch
 	+ 25_all_ia64-bootstrap.patch
 	+ 26_all_disable-riscv32-ABIs.patch
-	+ 27_all_hppa64-patchable-entry-90751.patch
