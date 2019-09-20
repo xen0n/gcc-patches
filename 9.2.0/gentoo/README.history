@@ -1,5 +1,6 @@
 2		TODO
 	+ 27_all_sparc-PIC-constant-PR91472.patch
+	+ 28_all_sparc-fpu-subregs-91269.patch
 
 1		12 Aug 2019
 	+ 01_all_default-fortify-source.patch
