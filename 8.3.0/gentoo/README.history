@@ -1,6 +1,7 @@
 1.2		TODO
 	+ 29_all_ia64-bootstrap.patch
 	+ 30_all_sparc-PIC-constant-PR91472.patch
+	+ 31_all_sparc-fpu-subregs-91269.patch
 
 1.1		06 Apr 2019
 	+ 26_all_overridable_native.patch
