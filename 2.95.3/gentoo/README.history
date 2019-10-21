@@ -1,3 +1,6 @@
+2		TODO
+	- 10_alpha_new-atexit.patch
+
 1.5 		3 Sep 2018
 	+ 44_all_gcc-texi.patch
 	+ 45_all_libexec-gcc-as.patch
