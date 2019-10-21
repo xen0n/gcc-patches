@@ -1,3 +1,7 @@
+3		TODO
+	- 01_ppc_gcc34-multi32-hack.patch
+	- 01_sparc_gcc34-multi32-hack.patch
+
 2		06 Jun 2019
 	+ 93_all_gperf-inline.patch
 
