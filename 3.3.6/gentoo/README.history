@@ -1,3 +1,8 @@
+3		TODO
+	- 01_ppc_gcc33-multi32-hack.patch
+	- 01_sparc_gcc33-multi32-hack.patch
+	- 09_arm_gcc32-arm-reload1-fix.patch
+
 2		06 Jun 2019
 	+ 93_all_gperf-inline.patch
 	+ 94_all_flag_jni.patch
