@@ -1,3 +1,6 @@
+2		27 Oct 2019
+	U 98_all_cgraph_node-gcc-9.patch
+
 1.8		1 Jun 2019
 	+ 97_all_libjava-ucontext.patch
 	+ 98_all_cgraph_node-gcc-9.patch
