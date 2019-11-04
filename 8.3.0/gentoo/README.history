@@ -1,3 +1,6 @@
+3		TODO
+	- 30_all_sparc-PIC-constant-PR91472.patch
+
 2		22 Sep 2019
 	+ 29_all_ia64-bootstrap.patch
 	+ 30_all_sparc-PIC-constant-PR91472.patch
