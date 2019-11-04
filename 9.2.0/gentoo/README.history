@@ -1,5 +1,6 @@
 3		TODO
 	+ 30_all_arm64-march-native.patch
+	- 27_all_sparc-PIC-constant-PR91472.patch
 
 2		22 Sep 2019
 	+ 27_all_sparc-PIC-constant-PR91472.patch
