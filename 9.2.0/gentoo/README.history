@@ -1,5 +1,7 @@
 4		TODO
 	+ 31_all_openmp-for-SEGV.patch
+	+ 27_all_sparc-PIC-constant-PR91472.patch
+	+ 32_all_sparc-PIC-constant-part2.patch
 
 3		04 Nov 2019
 	+ 30_all_arm64-march-native.patch
