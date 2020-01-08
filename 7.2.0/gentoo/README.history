@@ -1,4 +1,4 @@
-1.2		TODO
+1.2		abandoned in favour of 7.5 branch
 	+ 97_all_shift-codegen-PR83565.patch
 1.1		06 Jan 2018
 	+ 95_all_static_override_pie.patch
