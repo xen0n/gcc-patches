@@ -1,4 +1,4 @@
-1.8		TODO
+1.8		abandoned in favour of 8.4 branch
 	+ 116_all_ipa-pgo-PR88561-fix.patch
 	U 55_all_extra-options.patch
 	+ 117_all_lto-ctor-dtor-target.patch
