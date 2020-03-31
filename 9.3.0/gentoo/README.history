@@ -2,6 +2,7 @@
 	- 04_all_default-ssp-fix.patch
 	+ 04_all_nossp-on-nostdlib.patch
 	+ 27_all_default_ssp-buffer-size.patch
+	+ 28_all_hppa-faster-synth_mult.patch
 
 1		12 Mar 2019
 	+ 01_all_default-fortify-source.patch
