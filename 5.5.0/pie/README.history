@@ -1,4 +1,4 @@
-0.6.6		TODO
+0.6.6		02 Apr 2020
 		U 02_all_gcc48_config.in.patch
 		05_all_gcc48_gcc.c.patch
 		16_all_gcc47_nopie_option.patch
@@ -7,9 +7,11 @@
 
 0.6.5		27 Oct 2015
 		U 24_all_gcc49_invoke.texi.patch
+
 0.6.4		29 Aug 2015
 		U 35_all_gcc51_config_arm.patch
 		U 40_all_gcc49_config_esp.patch
+
 0.6.3		26 Apr 2015
 		+ 01_all_gcc51_configure.patch
 		- 01_all_gcc49_configure.patch
@@ -21,10 +23,13 @@
 		+ 35_all_gcc48_config_arm.patch
 		+ 36_all_gcc51_config_mips.patch
 		+ 36_all_gcc48_config_mips.patch
+
 0.6.2		5 Jan 2015
 		U 03_all_gcc49_Makefile.in.patch
+
 0.6.1		07 Jun 2014
 		U 33_all_gcc48_config_rs6000.patch
+
 0.6.0		12 May 2014
 		+ 01_all_gcc49_configure.patch
 		- 01_all_gcc48_configure.patch
@@ -37,6 +42,7 @@
 		+35_all_gcc49_config_esp.h.patch
 		- 35_all_gcc48_config_esp.h.patch
 		U README
+
 0.5.9		4 Jan 2014
 		U 01_all_gcc48_configure.patch
 		U 03_all_gcc48_Makefile.in.patch
@@ -44,14 +50,18 @@
 		- 24_all_gcc44_invoke.texi.patch
 		+ 24_all_gcc48_invoke.texi.patch
 		U README
+
 0.5.8		11 Nov 2013
 		U 33_all_gcc48_config_rs6000.patch
+
 0.5.7		10 Jul 2013
 		U 35_all_gcc48_config_esp.h.patch
 		- 15_all_gcc44_decl-tls-model.patch
+
 0.5.6		03 Jun 2013
 		U 35_all_gcc48_config_arm.patch
 		U 37_all_gcc48_config_ia64.patch
+
 0.5.5		31 Mar 2013
 		- 01_all_gcc47_configure.patch
 		+ 01_all_gcc48_configure.patch
@@ -71,17 +81,21 @@
 		- 35_all_gcc47_config_esp.h.patch
 		- 35_all_gcc48_config_esp.h.patch
 		U README
+
 0.5.4		02 Oct 2012
 		U 01_all_gcc47_configure.patch
 		+  01_all_gcc47_configure.ac.patch
+
 0.5.3		06 Apr 2012
 		U 01_all_gcc47_configure.patch
 		+ 02_all_gcc47_config.in.patch
 		- 02_all_gcc45_config.in.patch
 		+ 06_all_gcc46_esp.h.patch
 		- 06_all_gcc45_esp.h.patch
+
 0.5.2		24 Jan 2012
 		+ 16_all_gcc47_nopie_option.patch
+
 0.5.1		17 Jan 2012
 		+ 01_all_gcc47_configure.patch
 		- 10_all_gcc45_configure.patch
@@ -101,6 +115,7 @@
 		- 35_all_gcc46_config_crtbegints.patch
 		+ 24_all_gcc44_invoke.texi.patch
 		+ 60_all_gcc44_invoke.texi.patch
+
 0.5.0		07 Dec 2011
 		+ 35_all_gcc46_config_crtbeginp.patch
 		- 35_all_gcc46_config_crtbegints.patch
@@ -110,10 +125,13 @@
 		- 11_all_gcc44_config.in.patch
 		+ 30_all_gcc45_esp.h.patch
 		- 30_all_gcc44_esp.h.patch
+
 0.4.9		09 Nov 2011
 		U 12_all_gcc46_Makefile.in.patch
+
 0.4.8		26 Mar 2011
 		U 22_all_gcc46-default-ssp.patch
+
 0.4.7		05 Mar 2011
 		U 20_all_gcc46_gcc.c.patch
 		+ 22_all_gcc46-default-ssp.patch
@@ -121,6 +139,7 @@
 		+ 30_all_gcc44_esp.h.patch
 		U 33_all_gcc46_config_rs6000_linux64.h.patch
 		U 35_all_gcc46_config_crtbegints.patch
+
 0.4.6		07 Jan 2011
 		+ 12_all_gcc46_Makefile.in.patch
 		- 12_all_gcc44_Makefile.in.patch
@@ -135,18 +154,23 @@
 		- 40_all_gcc44_obj_lang-specs.h.patch
 		- 40_all_gcc44_objp_lang-specs.h.patch
 		- 40_all_gcc44_cp_lang-specs.h.patch
+
 0.4.5		18 Jun 2010
 		U 35_all_gcc44_config_crtbegints.patch
+
 0.4.4		26 May 2010
 		U 30_all_gcc44_esp.h.patch
+
 0.4.3		26 May 2010
 		U 20_all_gcc44_gcc.c.patch
 		U 30_all_gcc44_esp.h.patch
+
 0.4.2		24 May 2010
 		U 10_all_gcc44_configure.patch
 		U 12_all_gcc44_Makefile.in.patch
 		U 11_all_gcc44_config.in.patch
 		U 30_all_gcc44_esp.h.patch
+
 0.4.1		29 Apr 2010
 		U 10_all_gcc45_configure.patch
 		U 12_all_gcc45_Makefile.in.patch
