@@ -1,5 +1,6 @@
 2	TODO
 	+ 29_all_libcpp-ar.patch
+	+ 30_all_alignof-failure-PR90736.patch
 
 1	03 Mar 2020
 	+ 01_all_default-fortify-source.patch
