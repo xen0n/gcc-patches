@@ -25,6 +25,7 @@ rm -f ${digest/gcc\//gcc\/files\/digest-}
 gver=${ebuild##*/gcc/gcc-} # trim leading path
 gver=${gver%%.ebuild}      # trim post .ebuild
 gver=${gver%%-*}           # trim any -r#'s
+gver=${gver%%_pre*}        # trim any _pre.*#'s
 
 # trim branch update number
 sgver=$(echo ${gver} | sed -e 's:[0-9]::g')
