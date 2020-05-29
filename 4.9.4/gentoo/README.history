@@ -1,5 +1,6 @@
 2		TODO
 	+ 102_all_ustat-sparc.patch
+	+ 103_all_whitespace-pa.patch
 
 1.4		1 Jun 2019
 	+ 99_all_remove-lieee.patch
