@@ -1,6 +1,8 @@
+7		TODO
+	+ 38_all_libcpp-ar.patch
+
 6		11 Mar 2019
 	+ 37_all_whitespace-pa.patch
-	+ 38_all_libcpp-ar.patch
 
 5		15 Feb 2020
 	+ 34_all_ia64-neg-insn-cost.patch
