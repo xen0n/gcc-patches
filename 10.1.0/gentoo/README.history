@@ -2,6 +2,7 @@
 	+ 29_all_fix-float-hang-PR95118.patch
 	+ 30_all_lto-intl-workaround-PR95194.patch
 	+ 31_all_ctor-range-PR95241.patch
+	+ 32_all_plugin-objdump.patch
 
 1		05 May 2020
 	+ 01_all_default-fortify-source.patch
