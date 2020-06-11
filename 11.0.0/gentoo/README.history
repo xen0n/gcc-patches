@@ -27,3 +27,4 @@
 	+ 26_all_EXTRA_OPTIONS-z-now.patch
 	+ 27_all_EXTRA_OPTIONS-fstack-clash-protection.patch
 	+ 28_all_lto-intl-workaround-PR95194.patch
+	+ 29_all_plugin-objdump.patch
