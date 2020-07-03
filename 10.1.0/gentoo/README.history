@@ -2,6 +2,7 @@
 	33_all_avx512-scalar-PR95528.patch
 	34_all_cet-cross-x86.patch
 	35_all_ICE-array-subscript-PR95508.patch
+	36_all_fno-delayed-branch.patch
 
 2		11 June 2020
 	+ 29_all_fix-float-hang-PR95118.patch
