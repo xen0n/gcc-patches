@@ -1,5 +1,6 @@
 2		TODO
 	+ 29_all_plugin-objdump.patch
+	+ 30_all_fno-delayed-branch.patch
 
 1		29 May 2020
 	+ 01_all_default-fortify-source.patch
