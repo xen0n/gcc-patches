@@ -10,7 +10,7 @@ __builtin_unreachable(); and mis-compiles python.
 Use blunt hammer and disable delayed slots until we have better fix.
 
 Reported-by: Jeroen Roovers
-Bug: From https://gcc.gnu.org/PR96015
+Bug: https://gcc.gnu.org/PR96015
 Bug: https://bugs.gentoo.org/729570.
 Signed-off-by: Sergei Trofimovich <siarheit@google.com>
 ---
