@@ -1,5 +1,6 @@
 4 		TODO
 	+ 37_all_sparc_pie_TEXTREL.patch
+	+ 38_all_ICE-ipa-fnsummary-PR96130.patch
 
 3		04 July 2020
 	+ 33_all_avx512-scalar-PR95528.patch
