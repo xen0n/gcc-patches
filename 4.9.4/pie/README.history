@@ -1,3 +1,6 @@
+2		1 Aug 2020
+	U 40_all_gcc49_config_esp.patch
+
 1		1 Aug 2020
 	U 02_all_gcc48_config.in.patch
 	U 05_all_gcc48_gcc.c.patch
