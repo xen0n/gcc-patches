@@ -1,6 +1,7 @@
 2		TODO
 	+ 33_all_lto-O0-mix-ICE-ipa-PR96291.patch
 	+ 34_all_fundecl-ICE-PR95820.patch
+	+ 35_all_ipa-fix-bit-CP.patch
 
 1 		23 July 2020
 	+ 01_all_default-fortify-source.patch
