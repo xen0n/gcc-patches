@@ -1,3 +1,6 @@
+7		TODO
+	- 30_all_fno-delayed-branch.patch
+
 6		28 Jan 2021
 	- 07_all_i386_libgcc_note.GNU-stack.patch
 
