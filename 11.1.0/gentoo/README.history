@@ -1,6 +1,7 @@
 2		TODO
 	+ 27_all_msp430-f2c.patch
 	+ 28_all_ctor-union-PR100489.patch
+	+ 29_all_perfect-implicit-PR100644.patch
 
 1		27 Apr 2021
 	+ 01_all_default-fortify-source.patch
