@@ -1,5 +1,6 @@
 4		TODO
 	+ 25_all_plugin-objdump.patch
+	+ 26_all_remove-cyclades.patch
 
 3 		29 May 2020
 	+ 24_all_libcpp-ar.patch
