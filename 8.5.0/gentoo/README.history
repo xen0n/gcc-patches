@@ -1,7 +1,7 @@
-2	TODO
+2		05 July 2021
 	+ 30_all_remove-cyclades.patch
 
-1	16 May 2021
+1		16 May 2021
 	+ 01_all_default-fortify-source.patch
 	+ 02_all_default-warn-format-security.patch
 	+ 03_all_default-warn-trampolines.patch
