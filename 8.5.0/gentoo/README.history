@@ -1,3 +1,7 @@
+3		TODO
+	+ 31_all_powerpcspe-pie-crt.patch
+	+ 32_all_powerpcspe-march-PLATFORM.patch
+
 2		05 July 2021
 	+ 30_all_remove-cyclades.patch
 
