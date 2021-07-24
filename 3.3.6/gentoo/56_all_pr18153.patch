@@ -14,8 +14,8 @@
 	-lunwind if possible.
 
 diff -urN gcc.old/config.in gcc/config.in
---- gcc.old/config.in	2004-12-10 13:38:35.000000000 +0100
-+++ gcc/config.in	2004-12-10 14:46:47.000000000 +0100
+--- a/gcc/config.in	2004-12-10 13:38:35.000000000 +0100
++++ b/gcc/config.in	2004-12-10 14:46:47.000000000 +0100
 @@ -228,6 +228,9 @@
  /* Define if you have the <langinfo.h> header file.  */
  #undef HAVE_LANGINFO_H
@@ -27,8 +27,8 @@ diff -urN gcc.old/config.in gcc/config.in
  #undef HAVE_LIMITS_H
  
 diff -urN gcc.old/configure.in gcc/configure.in
---- gcc.old/configure.in	2004-12-10 13:48:59.000000000 +0100
-+++ gcc/configure.in	2004-12-10 14:54:52.000000000 +0100
+--- a/gcc/configure.in	2004-12-10 13:48:59.000000000 +0100
++++ b/gcc/configure.in	2004-12-10 14:54:52.000000000 +0100
 @@ -2432,6 +2432,25 @@
  fi
  AC_MSG_RESULT($gcc_cv_ld_eh_frame_hdr)
@@ -56,8 +56,8 @@ diff -urN gcc.old/configure.in gcc/configure.in
  gcc_cv_ld_as_needed=no
  if test x$gcc_cv_gld_major_version != x -a x$gcc_cv_gld_minor_version != x; then
 diff -urN gcc.old/gcc.c gcc/gcc.c
---- gcc.old/gcc.c	2004-12-10 13:17:41.000000000 +0100
-+++ gcc/gcc.c	2004-12-10 14:45:51.000000000 +0100
+--- a/gcc/gcc.c	2004-12-10 13:17:41.000000000 +0100
++++ b/gcc/gcc.c	2004-12-10 14:45:51.000000000 +0100
 @@ -1584,7 +1584,11 @@
  			    "-lgcc",
  			    "-lgcc_eh"

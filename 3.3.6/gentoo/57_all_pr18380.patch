@@ -11,8 +11,8 @@
 	* unwind-dw2.c (_Unwind_FindTableEntry): Removed.
 
 diff -ur gcc.old/config/ia64/unwind-ia64.h gcc/config/ia64/unwind-ia64.h
---- gcc.old/config/ia64/unwind-ia64.h	2001-05-12 08:03:20.000000000 +0200
-+++ gcc/config/ia64/unwind-ia64.h	2004-12-10 14:58:10.000000000 +0100
+--- a/gcc/config/ia64/unwind-ia64.h	2001-05-12 08:03:20.000000000 +0200
++++ b/gcc/config/ia64/unwind-ia64.h	2004-12-10 14:58:10.000000000 +0100
 @@ -28,4 +28,5 @@
  
  extern struct unw_table_entry *
@@ -21,8 +21,8 @@ diff -ur gcc.old/config/ia64/unwind-ia64.h gcc/config/ia64/unwind-ia64.h
 +			unsigned long *gp)
 +			__attribute__ ((__visibility__ ("hidden")));
 diff -ur gcc.old/unwind-dw2.c gcc/unwind-dw2.c
---- gcc.old/unwind-dw2.c	2004-12-10 13:17:42.000000000 +0100
-+++ gcc/unwind-dw2.c	2004-12-10 14:58:10.000000000 +0100
+--- a/gcc/unwind-dw2.c	2004-12-10 13:17:42.000000000 +0100
++++ b/gcc/unwind-dw2.c	2004-12-10 14:58:10.000000000 +0100
 @@ -1275,7 +1275,6 @@
  alias (_Unwind_Backtrace);
  alias (_Unwind_DeleteException);

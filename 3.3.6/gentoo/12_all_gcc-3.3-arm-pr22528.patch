@@ -6,8 +6,8 @@ http://gcc.gnu.org/ml/gcc-patches/2003-11/msg00832.html
 	* arm.md (storehi): Avoid use of explicit subreg.
 	(storehi_bigend, storeinthi, movhi_bigend): Likewise.
 
---- gcc/config/arm/arm.md
-+++ gcc/config/arm/arm.md
+--- a/gcc/config/arm/arm.md
++++ b/gcc/config/arm/arm.md
 @@ -4275,7 +4275,7 @@
     (set (match_dup 2)
  	(ashiftrt:SI (match_operand 0 "" "") (const_int 8)))

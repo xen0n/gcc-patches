@@ -1,5 +1,5 @@
---- gcc/config/arm/arm.c	Fri Mar  5 18:49:42 2004
-+++ gcc/config/arm/arm.c	Fri Mar  5 16:00:21 2004
+--- a/gcc/config/arm/arm.c	Fri Mar  5 18:49:42 2004
++++ b/gcc/config/arm/arm.c	Fri Mar  5 16:00:21 2004
 @@ -7598,6 +7629,26 @@
    return_used_this_function = 0;  
  }

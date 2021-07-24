@@ -1,3 +1,27 @@
+4		07 July 2021
+	U 00_all_alpha-mieee-default.patch
+	U 02_all_gcc33-ice-hack.patch
+	U 08_all_gcc-3.3.6-cross-compile.patch
+	U 09_all_gcc-3.4.6-c-parse-bison.patch
+	U 10_all_gcc333-debian-arm-getoff.patch
+	U 11_all_gcc333-debian-arm-ldm.patch
+	U 12_all_gcc-3.3-arm-pr22528.patch
+	U 12_all_gcc333_pre20040408-stack-size.patch
+	U 17_all_gcc33-c99-numbers.patch
+	U 25_all_gcc-3.3.3-libiberty-pic.patch
+	U 25_all_gcc33-libstdc++-pic.patch
+	U 26_all_gcc33-m68k-const.patch
+	U 28_all_gcc33-m68k-loop.patch
+	U 29_all_gcc33-m68k-subreg.patch
+	U 40_all_gcc33-warn-unused-result.patch
+	U 54_all_pr10692-fix.patch
+	U 55_all_pr17684.patch
+	U 56_all_pr18153.patch
+	U 57_all_pr18380.patch
+	U 58_all_pr18508.patch
+	U 59_all_pr23241.patch
+	U 88_all_gcc-3.3-make-SHELL.patch
+
 3		Abandoned
 	- 01_ppc_gcc33-multi32-hack.patch
 	- 01_sparc_gcc33-multi32-hack.patch

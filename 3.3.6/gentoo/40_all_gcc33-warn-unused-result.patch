@@ -21,8 +21,8 @@
 
 	* gcc.dg/attr-warn-unused-result.c: New test.
 
---- gcc/c-common.c.jj	2003-07-31 17:59:06.000000000 -0400
-+++ gcc/c-common.c	2003-09-16 12:22:15.000000000 -0400
+--- a/gcc/c-common.c.jj	2003-07-31 17:59:06.000000000 -0400
++++ b/gcc/c-common.c	2003-09-16 12:22:15.000000000 -0400
 @@ -40,6 +40,7 @@ Software Foundation, 59 Temple Place - S
  #include "except.h"		/* For USING_SJLJ_EXCEPTIONS.  */
  #include "tree-inline.h"
@@ -103,8 +103,8 @@
  /* Keep a list of vector type nodes we created in handle_vector_size_attribute,
     to prevent us from duplicating type nodes unnecessarily.
     The normal mechanism to prevent duplicates is to use type_hash_canon, but
---- gcc/calls.c.jj	2003-09-16 11:41:06.000000000 -0400
-+++ gcc/calls.c	2003-09-16 12:19:41.000000000 -0400
+--- a/gcc/calls.c.jj	2003-09-16 11:41:06.000000000 -0400
++++ b/gcc/calls.c	2003-09-16 12:19:41.000000000 -0400
 @@ -2273,13 +2273,27 @@ expand_call (exp, target, ignore)
  	  (*lang_hooks.mark_addressable) (fndecl);
  	}
@@ -134,8 +134,8 @@
  
  #ifdef REG_PARM_STACK_SPACE
  #ifdef MAYBE_REG_PARM_STACK_SPACE
---- gcc/c-common.h.jj	2003-07-31 17:59:06.000000000 -0400
-+++ gcc/c-common.h	2003-09-16 12:19:41.000000000 -0400
+--- a/gcc/c-common.h.jj	2003-07-31 17:59:06.000000000 -0400
++++ b/gcc/c-common.h	2003-09-16 12:19:41.000000000 -0400
 @@ -39,6 +39,7 @@ Software Foundation, 59 Temple Place - S
     2: STMT_LINENO_FOR_FN_P (in _STMT)
     3: SCOPE_NO_CLEANUPS_P (in SCOPE_STMT)
@@ -156,8 +156,8 @@
  /* LABEL_STMT accessor. This gives access to the label associated with
     the given label statement.  */
  #define LABEL_STMT_LABEL(NODE)  TREE_OPERAND (LABEL_STMT_CHECK (NODE), 0)
---- gcc/expr.c.jj	2003-09-16 11:41:14.000000000 -0400
-+++ gcc/expr.c	2003-09-16 12:55:32.000000000 -0400
+--- a/gcc/expr.c.jj	2003-09-16 11:41:14.000000000 -0400
++++ b/gcc/expr.c	2003-09-16 12:55:32.000000000 -0400
 @@ -45,6 +45,7 @@ Software Foundation, 59 Temple Place - S
  #include "langhooks.h"
  #include "intl.h"
@@ -206,8 +206,8 @@
  	return to_return;
        }
  
---- gcc/tree-inline.c.jj	2003-07-25 05:55:55.000000000 -0400
-+++ gcc/tree-inline.c	2003-09-16 12:19:41.000000000 -0400
+--- a/gcc/tree-inline.c.jj	2003-07-25 05:55:55.000000000 -0400
++++ b/gcc/tree-inline.c	2003-09-16 12:19:41.000000000 -0400
 @@ -1202,6 +1202,9 @@ expand_call_inline (tp, walk_subtrees, d
    expr = build1 (STMT_EXPR, TREE_TYPE (TREE_TYPE (fn)), make_node (COMPOUND_STMT));
    /* There is no scope associated with the statement-expression.  */
@@ -218,8 +218,8 @@
    stmt = STMT_EXPR_STMT (expr);
  #else /* INLINER_FOR_JAVA */
    /* Build a block containing code to initialize the arguments, the
---- gcc/input.h.jj	2002-05-27 14:55:42.000000000 -0400
-+++ gcc/input.h	2003-09-16 12:19:41.000000000 -0400
+--- a/gcc/input.h.jj	2002-05-27 14:55:42.000000000 -0400
++++ b/gcc/input.h	2003-09-16 12:19:41.000000000 -0400
 @@ -42,6 +42,9 @@ struct file_stack
     The line member is not accurate for the innermost file on the stack.  */
  extern struct file_stack *input_file_stack;
@@ -230,8 +230,8 @@
  /* Incremented on each change to input_file_stack.  */
  extern int input_file_stack_tick;
  
---- gcc/Makefile.in.jj	2003-08-12 10:12:01.000000000 -0400
-+++ gcc/Makefile.in	2003-09-16 12:20:33.000000000 -0400
+--- a/gcc/Makefile.in.jj	2003-08-12 10:12:01.000000000 -0400
++++ b/gcc/Makefile.in	2003-09-16 12:20:33.000000000 -0400
 @@ -1250,7 +1250,8 @@ tlink.o: tlink.c $(DEMANGLE_H) $(HASHTAB
  c-common.o : c-common.c $(CONFIG_H) $(SYSTEM_H) $(TREE_H) $(OBSTACK_H) \
  	$(C_COMMON_H) flags.h toplev.h output.h c-pragma.h $(RTL_H) $(GGC_H) \
@@ -251,8 +251,8 @@
  builtins.o : builtins.c $(CONFIG_H) $(SYSTEM_H) $(RTL_H) $(TREE_H) flags.h \
     $(TARGET_H) function.h $(REGS_H) $(EXPR_H) $(OPTABS_H) insn-config.h \
     $(RECOG_H) output.h typeclass.h hard-reg-set.h toplev.h hard-reg-set.h \
---- gcc/doc/extend.texi.jj	2003-07-25 05:56:39.000000000 -0400
-+++ gcc/doc/extend.texi	2003-09-16 13:05:53.000000000 -0400
+--- a/gcc/doc/extend.texi.jj	2003-07-25 05:56:39.000000000 -0400
++++ b/gcc/doc/extend.texi	2003-09-16 13:05:53.000000000 -0400
 @@ -1946,10 +1946,11 @@ attributes are currently defined for fun
  @code{format}, @code{format_arg}, @code{no_instrument_function},
  @code{section}, @code{constructor}, @code{destructor}, @code{used},
@@ -296,8 +296,8 @@
  @item weak
  @cindex @code{weak} attribute
  The @code{weak} attribute causes the declaration to be emitted as a weak
---- gcc/testsuite/gcc.dg/attr-warn-unused-result.c.jj	2003-09-16 12:19:41.000000000 -0400
-+++ gcc/testsuite/gcc.dg/attr-warn-unused-result.c	2003-09-16 12:19:41.000000000 -0400
+--- a/gcc/testsuite/gcc.dg/attr-warn-unused-result.c.jj	2003-09-16 12:19:41.000000000 -0400
++++ b/gcc/testsuite/gcc.dg/attr-warn-unused-result.c	2003-09-16 12:19:41.000000000 -0400
 @@ -0,0 +1,188 @@
 +/* warn_unused_result attribute tests.  */
 +/* { dg-do compile } */

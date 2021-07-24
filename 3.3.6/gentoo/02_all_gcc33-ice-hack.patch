@@ -1,5 +1,5 @@
---- gcc/system.h.jj	2003-04-11 14:10:24.000000000 -0400
-+++ gcc/system.h	2003-06-05 12:18:46.000000000 -0400
+--- a/gcc/system.h.jj	2003-04-11 14:10:24.000000000 -0400
++++ b/gcc/system.h	2003-06-05 12:18:46.000000000 -0400
 @@ -148,6 +148,10 @@ extern int errno;
  # endif
  #endif
@@ -11,8 +11,8 @@
  #ifdef HAVE_UNISTD_H
  # include <unistd.h>
  #endif
---- gcc/gcc.c.jj	2003-06-03 07:22:13.000000000 -0400
-+++ gcc/gcc.c	2003-06-05 12:18:46.000000000 -0400
+--- a/gcc/gcc.c.jj	2003-06-03 07:22:13.000000000 -0400
++++ b/gcc/gcc.c	2003-06-05 12:18:46.000000000 -0400
 @@ -109,6 +109,10 @@ extern int getrusage PARAMS ((int, struc
  #define TARGET_OBJECT_SUFFIX ".o"
  #endif
@@ -290,8 +290,8 @@
  /* Search for a file named NAME trying various prefixes including the
     user's -B prefix and some standard ones.
     Return the absolute file name found.  If nothing is found, return NAME.  */
---- gcc/diagnostic.c.jj	2003-06-03 08:45:21.000000000 -0400
-+++ gcc/diagnostic.c	2003-06-05 12:20:06.000000000 -0400
+--- a/gcc/diagnostic.c.jj	2003-06-03 08:45:21.000000000 -0400
++++ b/gcc/diagnostic.c	2003-06-05 12:20:06.000000000 -0400
 @@ -1208,7 +1208,7 @@ internal_error VPARAMS ((const char *msg
  "Please submit a full bug report,\n\
  with preprocessed source if appropriate.\n\

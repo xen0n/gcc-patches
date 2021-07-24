@@ -4,8 +4,8 @@ https://bugs.gentoo.org/348893
 
 	* c-parse.in (structsp_attr): Fix for bison 2.4.1 pedantry.
 
---- branches/gcc-3_4-branch/gcc/c-parse.in	2004/10/14 23:12:53	89061
-+++ branches/gcc-3_4-branch/gcc/c-parse.in	2009/11/02 22:14:49	153828
+--- a/gcc/c-parse.in	2004/10/14 23:12:53	89061
++++ b/gcc/c-parse.in	2009/11/02 22:14:49	153828
 @@ -1730,7 +1730,7 @@
  
  structsp_attr:

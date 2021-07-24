@@ -14,8 +14,8 @@ because it'd make behavior across OS's inconsistent:
 This makes sense for upstream, but Gentoo is more concerned about packages
 behaving the same across arches under Linux.
 
---- gcc/config/alpha/alpha.h
-+++ gcc/config/alpha/alpha.h
+--- a/gcc/config/alpha/alpha.h
++++ b/gcc/config/alpha/alpha.h
 @@ -96,7 +96,7 @@
    while (0)
  #endif

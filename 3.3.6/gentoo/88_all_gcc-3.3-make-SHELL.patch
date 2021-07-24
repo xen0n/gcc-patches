@@ -1,5 +1,5 @@
---- gcc/Makefile.in
-+++ gcc/Makefile.in
+--- a/gcc/Makefile.in
++++ b/gcc/Makefile.in
 @@ -2365,6 +2365,7 @@
  	(MAKE="$(MAKE)"; srcdir=`cd $(srcdir)/fixinc && ${PWD_COMMAND}` ; \
  	CC="$(HOST_CC)"; CFLAGS="$(HOST_CFLAGS)"; LDFLAGS="$(HOST_LDFLAGS)"; \

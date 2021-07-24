@@ -1,5 +1,5 @@
---- gcc/config/arm/arm.c	2003-06-14 15:20:53.000000000 +0100
-+++ gcc/config/arm/arm.c	2004-03-06 15:15:32.000000000 +0000
+--- a/gcc/config/arm/arm.c	2003-06-14 15:20:53.000000000 +0100
++++ b/gcc/config/arm/arm.c	2004-03-06 15:15:32.000000000 +0000
 @@ -2364,6 +2394,40 @@
    return 1;
  }
@@ -79,8 +79,8 @@
  #endif /* !ARM_PE */
  
 
---- gcc/config/arm/arm.h	Fri Mar  5 18:49:44 2004
-+++ gcc/config/arm/arm.h	Fri Mar  5 15:04:31 2004
+--- a/gcc/config/arm/arm.h	Fri Mar  5 18:49:44 2004
++++ b/gcc/config/arm/arm.h	Fri Mar  5 15:04:31 2004
 @@ -1870,6 +1870,7 @@
     Note, '@' and '*' have already been taken.  */
  #define SHORT_CALL_FLAG_CHAR	'^'

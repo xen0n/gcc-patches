@@ -29,13 +29,8 @@ r~
 # DP:         a previous output reload to RELOAD_FOR_INPUT.
 
 
-Index: reload1.c
-===================================================================
-RCS file: /cvs/gcc/gcc/gcc/reload1.c,v
-retrieving revision 1.456
-diff -c -p -d -r1.456 reload1.c
-*** gcc/reload1.c	23 Dec 2004 04:53:48 -0000	1.456
---- gcc/reload1.c	6 Jan 2005 04:05:46 -0000
+*** a/gcc/reload1.c	23 Dec 2004 04:53:48 -0000	1.456
+--- b/gcc/reload1.c	6 Jan 2005 04:05:46 -0000
 *************** do_input_reload (struct insn_chain *chai
 *** 6822,6827 ****
 --- 6822,6831 ----

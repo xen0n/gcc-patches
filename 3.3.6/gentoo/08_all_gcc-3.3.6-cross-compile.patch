@@ -2,8 +2,8 @@ Some notes on the 'bootstrap with or without libc headers' debate:
 http://linuxfromscratch.org/pipermail/lfs-dev/2005-July/052409.html
 http://gcc.gnu.org/ml/gcc/2005-07/msg01195.html
 
---- gcc/configure.in
-+++ gcc/configure.in
+--- a/gcc/configure.in
++++ b/gcc/configure.in
 @@ -1276,8 +1276,9 @@
  # This prevents libgcc2 from containing any code which requires libc
  # support.
@@ -16,8 +16,8 @@ http://gcc.gnu.org/ml/gcc/2005-07/msg01195.html
         inhibit_libc=-Dinhibit_libc
  fi
  AC_SUBST(inhibit_libc)
---- gcc/configure
-+++ gcc/configure
+--- a/gcc/configure
++++ b/gcc/configure
 @@ -1276,8 +1276,9 @@
  # This prevents libgcc2 from containing any code which requires libc
  # support.
@@ -30,8 +30,8 @@ http://gcc.gnu.org/ml/gcc/2005-07/msg01195.html
         inhibit_libc=-Dinhibit_libc
  fi
  AC_SUBST(inhibit_libc)
---- gcc/config/alpha/linux.h
-+++ gcc/config/alpha/linux.h
+--- a/gcc/config/alpha/linux.h
++++ b/gcc/config/alpha/linux.h
 @@ -72,6 +72,7 @@
  /* Do code reading to identify a signal frame, and set the frame
     state data appropriately.  See unwind-dw2.c for the structs.  */
@@ -45,8 +45,8 @@ http://gcc.gnu.org/ml/gcc/2005-07/msg01195.html
      goto SUCCESS;							\
    } while (0)
 +#endif /* inhibit_libc */
---- gcc/config/i386/linux.h
-+++ gcc/config/i386/linux.h
+--- a/gcc/config/i386/linux.h
++++ b/gcc/config/i386/linux.h
 @@ -240,6 +240,7 @@
  /* Do code reading to identify a signal frame, and set the frame
     state data appropriately.  See unwind-dw2.c for the structs.  */

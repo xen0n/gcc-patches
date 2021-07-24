@@ -3,8 +3,8 @@
 # 	PR optimization/9812
 # 	* config/m68k/m68k.md: Avoid forcing fp constants into memory.
 
---- gcc/config/m68k/m68k.md	17 Mar 2003 10:22:00 -0000	1.48.8.1.4.3
-+++ gcc/config/m68k/m68k.md	7 Apr 2003 18:05:03 -0000
+--- a/gcc/config/m68k/m68k.md	17 Mar 2003 10:22:00 -0000	1.48.8.1.4.3
++++ b/gcc/config/m68k/m68k.md	7 Apr 2003 18:05:03 -0000
 @@ -675,7 +675,7 @@
  
  (define_insn ""

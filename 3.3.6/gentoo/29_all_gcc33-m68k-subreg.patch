@@ -3,9 +3,8 @@
 #	* gcc/final.c (alter_subreg): Adjust stack offset for a paradoxical
 #	  SUBREG, when it's pushed on the stack.
 
-diff -u -p -r1.241.2.4 final.c
---- gcc/final.c	24 May 2002 21:26:50 -0000	1.241.2.4
-+++ gcc/final.c	3 Apr 2003 22:55:06 -0000
+--- a/gcc/final.c	24 May 2002 21:26:50 -0000	1.241.2.4
++++ b/gcc/final.c	3 Apr 2003 22:55:06 -0000
 @@ -2738,7 +2738,15 @@ alter_subreg (xp)
    /* simplify_subreg does not remove subreg from volatile references.
       We are required to.  */

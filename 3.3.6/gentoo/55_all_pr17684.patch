@@ -30,8 +30,8 @@
 	files.
 
 diff -urN gcc.old/Makefile.in gcc/Makefile.in
---- gcc.old/Makefile.in	2004-12-10 13:28:49.000000000 +0100
-+++ gcc/Makefile.in	2004-12-10 14:36:38.000000000 +0100
+--- a/gcc/Makefile.in	2004-12-10 13:28:49.000000000 +0100
++++ b/gcc/Makefile.in	2004-12-10 14:36:38.000000000 +0100
 @@ -2678,8 +2678,9 @@
  # that don't exist in the distribution.
  INTL_CLEAN = intl.clean
@@ -116,8 +116,8 @@ diff -urN gcc.old/Makefile.in gcc/Makefile.in
  	  cp stage4/$${f} . ; \
  	else true; \
 diff -urN gcc.old/config/alpha/t-osf4 gcc/config/alpha/t-osf4
---- gcc.old/config/alpha/t-osf4	2003-01-26 12:35:07.000000000 +0100
-+++ gcc/config/alpha/t-osf4	2004-12-10 14:37:33.000000000 +0100
+--- a/gcc/config/alpha/t-osf4	2003-01-26 12:35:07.000000000 +0100
++++ b/gcc/config/alpha/t-osf4	2004-12-10 14:37:33.000000000 +0100
 @@ -11,9 +11,13 @@
  SHLIB_OBJS = @shlib_objs@
  
@@ -134,8 +134,8 @@ diff -urN gcc.old/config/alpha/t-osf4 gcc/config/alpha/t-osf4
  # $(slibdir) double quoted to protect it from expansion while building
  # libgcc.mk.  We want this delayed until actual install time.
 diff -urN gcc.old/config/arm/t-netbsd gcc/config/arm/t-netbsd
---- gcc.old/config/arm/t-netbsd	2003-01-26 12:35:08.000000000 +0100
-+++ gcc/config/arm/t-netbsd	2004-12-10 14:31:15.000000000 +0100
+--- a/gcc/config/arm/t-netbsd	2003-01-26 12:35:08.000000000 +0100
++++ b/gcc/config/arm/t-netbsd	2004-12-10 14:31:15.000000000 +0100
 @@ -11,8 +11,12 @@
  
  SHLIB_LINK = $(GCC_FOR_TARGET) $(LIBGCC2_CFLAGS) -shared -nodefaultlibs \
@@ -151,8 +151,8 @@ diff -urN gcc.old/config/arm/t-netbsd gcc/config/arm/t-netbsd
  # $(slibdir) double quoted to protect it from expansion while building
  # libgcc.mk.  We want this delayed until actual install time.
 diff -urN gcc.old/config/mips/t-iris5-6 gcc/config/mips/t-iris5-6
---- gcc.old/config/mips/t-iris5-6	2003-01-26 12:35:08.000000000 +0100
-+++ gcc/config/mips/t-iris5-6	2004-12-10 14:31:15.000000000 +0100
+--- a/gcc/config/mips/t-iris5-6	2003-01-26 12:35:08.000000000 +0100
++++ b/gcc/config/mips/t-iris5-6	2004-12-10 14:31:15.000000000 +0100
 @@ -9,8 +9,12 @@
  
  SHLIB_LINK = $(GCC_FOR_TARGET) $(LIBGCC2_CFLAGS) -shared -nodefaultlibs \
@@ -168,8 +168,8 @@ diff -urN gcc.old/config/mips/t-iris5-6 gcc/config/mips/t-iris5-6
  # ??? Irix 6.5 seems to eat the option fine (if we somehow remove the
  # -hidden_symbol option, which is documented to be ignored in conjunction
 diff -urN gcc.old/config/pa/t-hpux-shlib gcc/config/pa/t-hpux-shlib
---- gcc.old/config/pa/t-hpux-shlib	2003-01-26 12:35:08.000000000 +0100
-+++ gcc/config/pa/t-hpux-shlib	2004-12-10 14:31:15.000000000 +0100
+--- a/gcc/config/pa/t-hpux-shlib	2003-01-26 12:35:08.000000000 +0100
++++ b/gcc/config/pa/t-hpux-shlib	2004-12-10 14:31:15.000000000 +0100
 @@ -5,8 +5,12 @@
  SHLIB_OBJS = @shlib_objs@
  
@@ -185,8 +185,8 @@ diff -urN gcc.old/config/pa/t-hpux-shlib gcc/config/pa/t-hpux-shlib
  
  
 diff -urN gcc.old/config/sh/t-linux gcc/config/sh/t-linux
---- gcc.old/config/sh/t-linux	2004-07-26 02:47:35.000000000 +0200
-+++ gcc/config/sh/t-linux	2004-12-10 14:31:15.000000000 +0100
+--- a/gcc/config/sh/t-linux	2004-07-26 02:47:35.000000000 +0200
++++ b/gcc/config/sh/t-linux	2004-12-10 14:31:15.000000000 +0100
 @@ -25,8 +25,12 @@
  SHLIB_LINK = $(GCC_FOR_TARGET) $(LIBGCC2_CFLAGS) -shared -nodefaultlibs \
  	-Wl,--soname=$(SHLIB_SONAME) \
@@ -202,8 +202,8 @@ diff -urN gcc.old/config/sh/t-linux gcc/config/sh/t-linux
  	 echo "   Use the shared library, but some functions are only in"; \
  	 echo "   the static library.  */"; \
 diff -urN gcc.old/config/t-libunwind-elf gcc/config/t-libunwind-elf
---- gcc.old/config/t-libunwind-elf	2004-12-10 13:17:36.000000000 +0100
-+++ gcc/config/t-libunwind-elf	2004-12-10 14:31:15.000000000 +0100
+--- a/gcc/config/t-libunwind-elf	2004-12-10 13:17:36.000000000 +0100
++++ b/gcc/config/t-libunwind-elf	2004-12-10 14:31:15.000000000 +0100
 @@ -10,9 +10,14 @@
  
  SHLIBUNWIND_LINK = $(GCC_FOR_TARGET) $(LIBGCC2_CFLAGS) -shared \
@@ -222,8 +222,8 @@ diff -urN gcc.old/config/t-libunwind-elf gcc/config/t-libunwind-elf
  
  # $(slibdir) double quoted to protect it from expansion while building
 diff -urN gcc.old/config/t-slibgcc-elf-ver gcc/config/t-slibgcc-elf-ver
---- gcc.old/config/t-slibgcc-elf-ver	2003-01-26 12:35:07.000000000 +0100
-+++ gcc/config/t-slibgcc-elf-ver	2004-12-10 14:31:18.000000000 +0100
+--- a/gcc/config/t-slibgcc-elf-ver	2003-01-26 12:35:07.000000000 +0100
++++ b/gcc/config/t-slibgcc-elf-ver	2004-12-10 14:31:18.000000000 +0100
 @@ -13,8 +13,12 @@
  SHLIB_LINK = $(GCC_FOR_TARGET) $(LIBGCC2_CFLAGS) -shared -nodefaultlibs \
  	-Wl,--soname=$(SHLIB_SONAME) \
@@ -239,8 +239,8 @@ diff -urN gcc.old/config/t-slibgcc-elf-ver gcc/config/t-slibgcc-elf-ver
  # $(slibdir) double quoted to protect it from expansion while building
  # libgcc.mk.  We want this delayed until actual install time.
 diff -urN gcc.old/config/t-slibgcc-sld gcc/config/t-slibgcc-sld
---- gcc.old/config/t-slibgcc-sld	2003-01-26 12:35:07.000000000 +0100
-+++ gcc/config/t-slibgcc-sld	2004-12-10 14:31:18.000000000 +0100
+--- a/gcc/config/t-slibgcc-sld	2003-01-26 12:35:07.000000000 +0100
++++ b/gcc/config/t-slibgcc-sld	2004-12-10 14:31:18.000000000 +0100
 @@ -10,9 +10,13 @@
  
  SHLIB_LINK = $(GCC_FOR_TARGET) $(LIBGCC2_CFLAGS) -shared -nodefaultlibs \
@@ -257,8 +257,8 @@ diff -urN gcc.old/config/t-slibgcc-sld gcc/config/t-slibgcc-sld
  # $(slibdir) double quoted to protect it from expansion while building
  # libgcc.mk.  We want this delayed until actual install time.
 diff -urN gcc.old/mklibgcc.in gcc/mklibgcc.in
---- gcc.old/mklibgcc.in	2004-12-10 14:19:28.000000000 +0100
-+++ gcc/mklibgcc.in	2004-12-10 14:31:18.000000000 +0100
+--- a/gcc/mklibgcc.in	2004-12-10 14:19:28.000000000 +0100
++++ b/gcc/mklibgcc.in	2004-12-10 14:31:18.000000000 +0100
 @@ -503,6 +503,7 @@
  echo '	done'
  echo '	-for dir in '"${dirs}"'; do \'
