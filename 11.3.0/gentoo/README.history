@@ -24,3 +24,4 @@
 	+ 23_all_EXTRA_OPTIONS-fstack-clash-protection.patch
 	+ 24_all_lto-intl-workaround-PR95194.patch
 	+ 25_all_plugin-objdump.patch
+	+ 26_all_enable-cet.patch
