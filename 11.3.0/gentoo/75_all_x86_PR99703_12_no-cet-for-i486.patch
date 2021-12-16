@@ -1,26 +1,23 @@
 https://bugs.gentoo.org/777117
 https://gcc.gnu.org/bugzilla/show_bug.cgi?id=99703
 
-From 4183bc474348ffe4c7b5f23f93ee655fcdd2fd79 Mon Sep 17 00:00:00 2001
-From: Calvin Walton <calvin.walton@kepstin.ca>
-Date: Thu, 6 May 2021 14:38:00 -0400
-Subject: [PATCH] GCC_CET_HOST_FLAGS: Check if host supports multi-byte NOPs
+From: "H.J. Lu" <hjl.tools@gmail.com>
+Date: Fri, 12 Feb 2021 16:30:23 -0800
+Subject: GCC_CET_HOST_FLAGS: Check if host supports multi-byte NOPs
 
-This is a backport of upstream commits:
-fd7eb4bc94cafa745eba75c64fa483a1689a5aad
-3f570621352970945db657455e0570208ea2d70e
+Backport of fd7eb4bc94cafa745eba75c64fa483a1689a5aad to GCC 11
 
-To GCC 11.1
----
- config/cet.m4          | 19 +++++++++++--
- gcc/configure          | 29 +++++++++++++++++++
- libbacktrace/configure | 29 +++++++++++++++++++
- libcc1/configure       | 45 +++++++++++++++++++++---------
- libcpp/configure       | 29 +++++++++++++++++++
- libdecnumber/configure | 29 +++++++++++++++++++
- libiberty/configure    | 36 +++++++++++++++++++++++-
- lto-plugin/configure   | 63 +++++++++++++++++++++++++++++++-----------
- 8 files changed, 246 insertions(+), 33 deletions(-)
+Sync with binutils for PR binutils/27397.  Check if host supports
+multi-byte NOPs before enabling CET on host.
+
+config/
+
+	PR bootstrap/99703
+	* cet.m4 (GCC_CET_HOST_FLAGS): Check if host supports multi-byte
+	NOPs.
+
+All applicable configure scripts have been regenerated. Patch hunks
+which only updated line numbers have been excluded to reduce conflicts.
 
 diff --git a/config/cet.m4 b/config/cet.m4
 index c67fb4f35b6..7718be1afe8 100644
@@ -60,10 +57,10 @@ index c67fb4f35b6..7718be1afe8 100644
        AC_MSG_ERROR([Intel CET must be enabled on Intel CET enabled host])
      fi
 diff --git a/gcc/configure b/gcc/configure
-index e8ecb3b0297..405b5df3d75 100755
+index 708328e1670..e6e4d9e270e 100755
 --- a/gcc/configure
 +++ b/gcc/configure
-@@ -31969,6 +31969,34 @@ else
+@@ -32416,6 +32416,34 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
@@ -98,7 +95,7 @@ index e8ecb3b0297..405b5df3d75 100755
  static void
  foo (void)
  {
-@@ -32005,6 +32033,7 @@ rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
+@@ -32452,6 +32480,7 @@ rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
    conftest.$ac_objext conftest.beam conftest.$ac_ext
  fi
  
@@ -154,54 +151,10 @@ index 9b66bf5563a..a2f33c0f35d 100755
        as_fn_error $? "Intel CET must be enabled on Intel CET enabled host" "$LINENO" 5
      fi
 diff --git a/libcc1/configure b/libcc1/configure
-index 021ec265526..b198b0b9074 100755
+index 600e41cf5ea..b198b0b9074 100755
 --- a/libcc1/configure
 +++ b/libcc1/configure
-@@ -10777,7 +10777,7 @@ else
-   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
-   lt_status=$lt_dlunknown
-   cat > conftest.$ac_ext <<_LT_EOF
--#line 10790 "configure"
-+#line 10780 "configure"
- #include "confdefs.h"
- 
- #if HAVE_DLFCN_H
-@@ -10883,7 +10883,7 @@ else
-   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
-   lt_status=$lt_dlunknown
-   cat > conftest.$ac_ext <<_LT_EOF
--#line 10896 "configure"
-+#line 10886 "configure"
- #include "confdefs.h"
- 
- #if HAVE_DLFCN_H
-@@ -14028,16 +14028,6 @@ freebsd* | dragonfly*)
-   esac
-   ;;
- 
--gnu*)
--  version_type=linux
--  need_lib_prefix=no
--  need_version=no
--  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}${major} ${libname}${shared_ext}'
--  soname_spec='${libname}${release}${shared_ext}$major'
--  shlibpath_var=LD_LIBRARY_PATH
--  hardcode_into_libs=yes
--  ;;
--
- haiku*)
-   version_type=linux
-   need_lib_prefix=no
-@@ -14159,7 +14149,7 @@ linux*oldld* | linux*aout* | linux*coff*)
- # project, but have not yet been accepted: they are GCC-local changes
- # for the time being.  (See
- # https://lists.gnu.org/archive/html/libtool-patches/2018-05/msg00000.html)
--linux* | k*bsd*-gnu | kopensolaris*-gnu | uclinuxfdpiceabi)
-+linux* | k*bsd*-gnu | kopensolaris*-gnu | gnu* | uclinuxfdpiceabi)
-   version_type=linux
-   need_lib_prefix=no
-   need_version=no
-@@ -14663,6 +14653,34 @@ else
+@@ -14653,6 +14653,34 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
@@ -236,7 +189,7 @@ index 021ec265526..b198b0b9074 100755
  static void
  foo (void)
  {
-@@ -14699,6 +14717,7 @@ rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
+@@ -14689,6 +14717,7 @@ rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
    conftest.$ac_objext conftest.beam conftest.$ac_ext
  fi
  
@@ -339,7 +292,7 @@ index 6b62f8ba665..da5302f9315 100755
        as_fn_error $? "Intel CET must be enabled on Intel CET enabled host" "$LINENO" 5
      fi
 diff --git a/libiberty/configure b/libiberty/configure
-index 2ea7c119809..905bcda7e81 100755
+index 61c62a33b3a..14a555c4ed6 100755
 --- a/libiberty/configure
 +++ b/libiberty/configure
 @@ -5396,6 +5396,34 @@ else
@@ -385,22 +338,8 @@ index 2ea7c119809..905bcda7e81 100755
      if test x$enable_cet = xno -a x$have_cet = xyes; then
        as_fn_error $? "Intel CET must be enabled on Intel CET enabled host" "$LINENO" 5
      fi
-@@ -7380,7 +7409,12 @@ if ${ac_cv_func_mmap_fixed_mapped+:} false; then :
-   $as_echo_n "(cached) " >&6
- else
-   if test "$cross_compiling" = yes; then :
--  ac_cv_func_mmap_fixed_mapped=no
-+  case "$host_os" in # ((
-+			  # Guess yes on platforms where we know the result.
-+		  linux*) ac_cv_func_mmap_fixed_mapped=yes ;;
-+			  # If we don't know, assume the worst.
-+		  *)      ac_cv_func_mmap_fixed_mapped=no ;;
-+		esac
- else
-   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
- /* end confdefs.h.  */
 diff --git a/lto-plugin/configure b/lto-plugin/configure
-index baa84adbb6c..26aad9dd699 100755
+index 22a4357a58e..26aad9dd699 100755
 --- a/lto-plugin/configure
 +++ b/lto-plugin/configure
 @@ -5791,6 +5791,34 @@ else
@@ -446,64 +385,5 @@ index baa84adbb6c..26aad9dd699 100755
      if test x$enable_cet = xno -a x$have_cet = xyes; then
        as_fn_error $? "Intel CET must be enabled on Intel CET enabled host" "$LINENO" 5
      fi
-@@ -8429,23 +8458,25 @@ _LT_EOF
- fi
- { $as_echo "$as_me:${as_lineno-$LINENO}: result: $lt_cv_ld_force_load" >&5
- $as_echo "$lt_cv_ld_force_load" >&6; }
--    case $host_os in
--    rhapsody* | darwin1.[012])
-+    # Allow for Darwin 4-7 (macOS 10.0-10.3) although these are not expect to
-+    # build without first building modern cctools / linker.
-+    case $host_cpu-$host_os in
-+    *-rhapsody* | *-darwin1.[012])
-       _lt_dar_allow_undefined='${wl}-undefined ${wl}suppress' ;;
--    darwin1.*)
-+    *-darwin1.*)
-       _lt_dar_allow_undefined='${wl}-flat_namespace ${wl}-undefined ${wl}suppress' ;;
--    darwin*) # darwin 5.x on
--      # if running on 10.5 or later, the deployment target defaults
--      # to the OS version, if on x86, and 10.4, the deployment
--      # target defaults to 10.4. Don't you love it?
--      case ${MACOSX_DEPLOYMENT_TARGET-10.0},$host in
--	10.0,*86*-darwin8*|10.0,*-darwin[91]*)
--	  _lt_dar_allow_undefined='${wl}-undefined ${wl}dynamic_lookup' ;;
-+    *-darwin*)
-+      # darwin 5.x (macOS 10.1) onwards we only need to adjust when the
-+      # deployment target is forced to an earlier version.
-+      case ${MACOSX_DEPLOYMENT_TARGET-UNSET},$host in
-+	UNSET,*-darwin[89]*|UNSET,*-darwin[12][0123456789]*)
-+	  ;;
- 	10.[012][,.]*)
--	  _lt_dar_allow_undefined='${wl}-flat_namespace ${wl}-undefined ${wl}suppress' ;;
--	10.*)
--	  _lt_dar_allow_undefined='${wl}-undefined ${wl}dynamic_lookup' ;;
--      esac
-+	  _lt_dar_allow_undefined='${wl}-flat_namespace ${wl}-undefined ${wl}suppress'
-+	  ;;
-+	*)
-+	  ;;
-+     esac
-     ;;
-   esac
-     if test "$lt_cv_apple_cc_single_mod" = "yes"; then
-@@ -11950,7 +11981,7 @@ else
-   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
-   lt_status=$lt_dlunknown
-   cat > conftest.$ac_ext <<_LT_EOF
--#line 11963 "configure"
-+#line 11984 "configure"
- #include "confdefs.h"
- 
- #if HAVE_DLFCN_H
-@@ -12056,7 +12087,7 @@ else
-   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
-   lt_status=$lt_dlunknown
-   cat > conftest.$ac_ext <<_LT_EOF
--#line 12069 "configure"
-+#line 12090 "configure"
- #include "confdefs.h"
- 
- #if HAVE_DLFCN_H
 -- 
-2.31.1
-
+2.34.1
