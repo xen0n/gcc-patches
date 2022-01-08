@@ -1,20 +1,48 @@
 #!/bin/bash
 
+find_ebuild() {
+	local ver=$1
+
+	for ebuild in \
+		${ver} \
+		/usr/local/src/gentoo/repo/gentoo/sys-devel/gcc/gcc-${ver}.ebuild \
+		"$(portageq get_repo_path $(portageq envvar EPREFIX)/ gentoo)"/sys-devel/gcc/gcc-${ver}.ebuild \
+		/usr/portage/sys-devel/gcc/gcc-${ver}.ebuild \
+		""
+	do
+		[[ -f ${ebuild} ]] && break
+	done
+
+	echo ${ebuild}
+}
+
+
 if [[ $# -ne 1 ]] ; then
 	echo "Usage: $0 <gcc ebuild>"
 	exit 1
 fi
 
 ver=${1%/}
-for ebuild in \
-	${ver} \
-	/usr/local/src/gentoo/repo/gentoo/sys-devel/gcc/gcc-${ver}.ebuild \
-	"$(portageq get_repo_path $(portageq envvar EPREFIX)/ gentoo)"/sys-devel/gcc/gcc-${ver}.ebuild \
-	/usr/portage/sys-devel/gcc/gcc-${ver}.ebuild \
-	""
-do
-	[[ -f ${ebuild} ]] && break
-done
+
+ebuild=$(find_ebuild ${ver})
+
+# If it doesn't exist, check for a snapshot version. We want to be able
+# to input e.g. '11.3.0' and fall back to '11.2.1_p2021127' if it doesn't
+# exist, as that version will become 11.3.0 anyway.
+#
+# (_p# is going to be something like gcc-11.2.1_p20211127, where gcc 11.2.1
+# will never be released (but gcc 11.2 was) and gcc 11.3 is the next release.
+# For such cases, use 11.3 as ver.)
+if [[ -z ${ebuild} ]] ; then
+	ver=${ver%%_p*}
+
+	ver_major=$(echo ${ver} | cut -d'.' -f1)
+	ver_minor=$(($(echo ${ver} | cut -d'.' -f2) - 1))
+	ver="${ver_major}.${ver_minor}.1_p*"
+
+	ebuild=$(find_ebuild ${ver})
+fi
+
 if [[ -z ${ebuild} ]] ; then
 	echo "!!! gcc ebuild '${ver}' does not exist"
 	exit 1
@@ -26,6 +54,12 @@ gver=${ebuild##*/gcc/gcc-} # trim leading path
 gver=${gver%%.ebuild}      # trim post .ebuild
 gver=${gver%%-*}           # trim any -r#'s
 gver=${gver%%_pre*}        # trim any _pre.*#'s
+
+# We use the same logic as finding the ebuild above for snapshots too
+gver=${gver%%_p*}
+gver_major=$(echo ${gver} | cut -d'.' -f1)
+gver_minor=$(($(echo ${gver} | cut -d'.' -f2) + 1))
+gver="${gver_major}.${gver_minor}.0"
 
 # trim branch update number
 sgver=$(echo ${gver} | sed -e 's:[0-9]::g')
@@ -40,6 +74,7 @@ eread() {
 		shift
 	done
 }
+
 eread MUSL_VER PP_VER HTB_VER HTB_GCC_VER MAN_VER SPECS_VER SPECS_GCC_VER
 [[ -n ${HTB_VER} && -z ${HTB_GCC_VER} ]] && HTB_GCC_VER=${gver}
 PATCH_VER=$(awk '{print $1; exit}' ./${gver}/gentoo/README.history)
