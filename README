@@ -16,8 +16,9 @@ Naming
 Documention
 -----------
 All patches need a header describing what the patch does, where it came from,
-and all relevent URLs.  Read http://dev.gentoo.org/~vapier/clean-patches and
-in particular use scrub_patch() or face the wrath.
+and all relevent URLs.  Read https://dev.gentoo.org/~vapier/clean-patches (or
+https://devmanual.gentoo.org/ebuild-writing/misc-files/patches/index.html#clean-patch-howto)
+and in particular use scrub_patch() or face the wrath.
 
 Update README.history whenever you add (+), remove (-), or update (U) a patch.
 
