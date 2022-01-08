@@ -40,7 +40,7 @@ eread() {
 		shift
 	done
 }
-eread UCLIBC_VER PP_VER HTB_VER HTB_GCC_VER MAN_VER SPECS_VER SPECS_GCC_VER
+eread MUSL_VER PP_VER HTB_VER HTB_GCC_VER MAN_VER SPECS_VER SPECS_GCC_VER
 [[ -n ${HTB_VER} && -z ${HTB_GCC_VER} ]] && HTB_GCC_VER=${gver}
 PATCH_VER=$(awk '{print $1; exit}' ./${gver}/gentoo/README.history)
 PIE_VER=$(awk '{print $1; exit}' ./${gver}/pie/README.history)
@@ -52,7 +52,7 @@ fi
 
 echo "Building patches for gcc version ${gver}"
 echo " - PATCH:    ${PATCH_VER} (taken from ${gver}/gentoo/README.history)"
-echo " - UCLIBC:   ${UCLIBC_VER}"
+echo " - MUSL:     ${MUSL_VER}"
 echo " - PIE:      ${PIE_VER} (taken from ${gver}/pie/README.history)"
 echo " - SPECS:    ${SPECS_VER} (${SPECS_GCC_VER:-${gver}})"
 echo " - SSP:      ${PP_VER}"
@@ -63,10 +63,10 @@ rm -rf tmp
 rm -f gcc-${gver}-*.tar.bz2
 
 # standard jobbies
-mkdir -p tmp/patch/exclude tmp/uclibc tmp/piepatch tmp/specs
+mkdir -p tmp/patch/exclude tmp/musl tmp/piepatch tmp/specs
 [[ -n ${PATCH_VER}  ]] && cp ${gver}/gentoo/*.patch ${gver}/gentoo/README.history README.Gentoo.patches tmp/patch/
 [[ -d ${gver}/man   ]] && cp -r ${gver}/man tmp/
-[[ -n ${UCLIBC_VER} ]] && cp -r ${gver}/uclibc/* README.Gentoo.patches tmp/uclibc/
+[[ -n ${MUSL_VER} ]] && cp -r ${gver}/musl/* README.Gentoo.patches tmp/musl/
 [[ -n ${PIE_VER}    ]] && cp -r ${gver}/pie/* README.Gentoo.patches tmp/piepatch/
 [[ -n ${PP_VER}     ]] && cp -r ${gver}/ssp tmp/
 [[ -n ${SPECS_VER}  ]] && cp -r ${SPECS_GCC_VER:-${gver}}/specs/* tmp/specs/
@@ -80,9 +80,9 @@ find tmp/ -name CVS -type d | xargs rm -rf
 [[ -n ${PATCH_VER}  ]] && {
 tar -jcf gcc-${sgver}-patches-${PATCH_VER}.tar.bz2 \
 	-C tmp patch || exit 1 ; }
-[[ -n ${UCLIBC_VER} ]] && {
-tar -jcf gcc-${sgver}-uclibc-patches-${UCLIBC_VER}.tar.bz2 \
-	-C tmp uclibc || exit 1 ; }
+[[ -n ${MUSL_VER} ]] && {
+tar -jcf gcc-${sgver}-musl-patches-${MUSL_VER}.tar.bz2 \
+	-C tmp musl || exit 1 ; }
 [[ -n ${PIE_VER}    ]] && {
 tar -jcf gcc-${sgver}-piepatches-v${PIE_VER}.tar.bz2 \
 	-C tmp piepatch || exit 1 ; }
