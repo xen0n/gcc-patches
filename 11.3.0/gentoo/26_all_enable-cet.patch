@@ -5,8 +5,7 @@ Subject: [PATCH] Enable CET (-fcf-protection=full) by default
 
 Needs:
 - CET to be enabled for GCC
-- -DEXTRA_OPTIONS_CF to be passed during build (via toolchain.eclass)
-  for now to avoid accidentally enabling it on other arches.
+- -DEXTRA_OPTIONS_CF to be passed during build (via toolchain.eclass).
 
   Only supported on amd64.
 
