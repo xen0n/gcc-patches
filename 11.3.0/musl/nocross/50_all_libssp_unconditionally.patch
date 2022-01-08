@@ -1,11 +1,15 @@
+https://bugs.gentoo.org/706210
+https://bugs.gentoo.org/747346
+
 Author: Timo Teräs <timo.teras@iki.fi>
 
-Alpine musl package provides libssp_nonshared.a. We link to it unconditionally,
+"Alpine musl package provides libssp_nonshared.a. We link to it unconditionally,
 as otherwise we get link failures if some objects are -fstack-protector built
 and final link happens with -fno-stack-protector. This seems to be the common
 case when bootstrapping gcc, the piepatches do not seem to fully fix the
-crosstoolchain and  bootstrap sequence wrt. stack-protector flag usage.
+crosstoolchain and  bootstrap sequence wrt. stack-protector flag usage."
 
+(We do the same in Gentoo.)
 --- gcc-6.1.0/gcc/gcc.c.orig
 +++ gcc-6.1.0/gcc/gcc.c
 @@ -870,8 +870,7 @@
