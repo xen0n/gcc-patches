@@ -1,7 +1,7 @@
 On Hardened we add some options like -fstack-clash-protection.
 
---- a/gcc/common.opt	2018-03-28 16:51:09.000000000 +0200
-+++ a/gcc/common.opt	2018-04-30 15:35:55.274096877 +0200
+--- a/gcc/common.opt
++++ a/gcc/common.opt
 @@ -2367,7 +2367,7 @@ Common Alias(fstack-check=, specific, no
  Insert stack checking code into the program.  Same as -fstack-check=specific.
  
@@ -11,8 +11,8 @@ On Hardened we add some options like -fstack-clash-protection.
  Insert code to probe each page of stack space as it is allocated to protect
  from stack-clash style attacks.
  
---- a/gcc/defaults.h	2018-01-03 11:03:58.000000000 +0100
-+++ b/gcc/defaults.h	2018-05-01 12:41:29.522851451 +0200
+--- a/gcc/defaults.h
++++ b/gcc/defaults.h
 @@ -1435,6 +1435,15 @@ see the files COPYING3 and COPYING.RUNTI
  #define STACK_CHECK_MAX_VAR_SIZE (STACK_CHECK_MAX_FRAME_SIZE / 100)
  #endif
@@ -29,8 +29,8 @@ On Hardened we add some options like -fstack-clash-protection.
  /* By default, the C++ compiler will use function addresses in the
     vtable entries.  Setting this nonzero tells the compiler to use
     function descriptors instead.  The value of this macro says how
---- a/gcc/toplev.c	2018-02-13 17:18:37.000000000 +0100
-+++ b/gcc/toplev.c	2018-04-30 16:46:37.244027303 +0200
+--- a/gcc/toplev.cc
++++ b/gcc/toplev.cc
 @@ -1682,6 +1682,10 @@ process_options (void)
  
    /* -fstack-clash-protection is not currently supported on targets
@@ -43,8 +43,8 @@ On Hardened we add some options like -fstack-clash-protection.
      {
        warning_at (UNKNOWN_LOCATION, 0,
 
---- a/libgcc/Makefile.in	2011-11-22 04:01:02.000000000 +0100
-+++ b/libgcc/Makefile.in	2011-12-25 15:18:22.449610631 +0100
+--- a/libgcc/Makefile.in
++++ b/libgcc/Makefile.in
 @@ -225,7 +225,7 @@ endif
  LIBGCC2_DEBUG_CFLAGS = -g
  LIBGCC2_CFLAGS = -O2 $(LIBGCC2_INCLUDES) $(GCC_CFLAGS) $(HOST_LIBGCC2_CFLAGS) \

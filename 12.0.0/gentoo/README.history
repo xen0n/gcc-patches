@@ -1,3 +1,18 @@
+3		5 Feb 2022
+
+	U 01_all_default-fortify-source.patch
+	U 02_all_default-warn-format-security.patch
+	U 04_all_nossp-on-nostdlib.patch
+	U 07_all_libiberty-asprintf.patch
+	U 11_all_ia64-TEXTREL.patch
+	- 15_all_libgomp-Werror.patch
+	- 16_all_libitm-Werror.patch
+	- 17_all_libatomic-Werror.patch
+	- 18_all_libbacktrace-Werror.patch
+	- 19_all_libsanitizer-Werror.patch
+	U 23_all_EXTRA_OPTIONS-z-now.patch
+	U 24_all_EXTRA_OPTIONS-fstack-clash-protection.patch
+
 2		28 July 2021
 	- 21_all_disable-riscv32-ABIs.patch
 
