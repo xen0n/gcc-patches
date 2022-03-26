@@ -7,7 +7,7 @@ initially Gentoo used too complicated macro.
 # DP: if the optimization level is > 0
 --- a/gcc/c-family/c-cppbuiltin.cc
 +++ b/gcc/c-family/c-cppbuiltin.cc
-@@ -951,6 +951,12 @@ c_cpp_builtins (cpp_reader *pfile)
+@@ -1510,6 +1510,12 @@ c_cpp_builtins (cpp_reader *pfile)
    builtin_define_with_value ("__REGISTER_PREFIX__", REGISTER_PREFIX, 0);
    builtin_define_with_value ("__USER_LABEL_PREFIX__", user_label_prefix, 0);
  
