@@ -22,7 +22,7 @@ diff --git a/gcc/configure b/gcc/configure
 index 3dcf7752b..c2049f117 100755
 --- a/gcc/configure
 +++ b/gcc/configure
-@@ -988,6 +988,7 @@ enable_gnu_unique_object
+@@ -1015,6 +1015,7 @@ enable_gnu_unique_object
  enable_linker_build_id
  enable_libssp
  enable_default_ssp
@@ -30,7 +30,7 @@ index 3dcf7752b..c2049f117 100755
  with_long_double_128
  with_long_double_format
  with_gc
-@@ -1740,6 +1741,7 @@ Optional Features:
+@@ -1773,6 +1774,7 @@ Optional Features:
                            compiler will always pass --build-id to linker
    --enable-libssp         enable linking against libssp
    --enable-default-ssp    enable Stack Smashing Protection as default
@@ -38,7 +38,7 @@ index 3dcf7752b..c2049f117 100755
    --enable-maintainer-mode
                            enable make rules and dependencies not useful (and
                            sometimes confusing) to the casual installer
-@@ -29330,17 +29332,33 @@ fi
+@@ -31387,17 +31389,33 @@ fi
  
  # Test for <sys/sdt.h> on the target.
  
@@ -80,7 +80,7 @@ index 3dcf7752b..c2049f117 100755
  # Some glibc targets used DFmode long double, but with glibc 2.4
 --- a/gcc/configure.ac
 +++ b/gcc/configure.ac
-@@ -6000,14 +6000,28 @@ AC_SUBST([enable_default_ssp])
+@@ -6904,14 +6904,28 @@ AC_SUBST([enable_default_ssp])
  
  # Test for <sys/sdt.h> on the target.
  GCC_TARGET_TEMPLATE([HAVE_SYS_SDT_H])

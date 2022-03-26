@@ -16,7 +16,7 @@ behaving the same across arches under Linux.
 
 --- a/gcc/config/alpha/alpha.h
 +++ b/gcc/config/alpha/alpha.h
-@@ -96,6 +96,8 @@ along with GCC; see the file COPYING3.  If not see
+@@ -94,6 +94,8 @@ along with GCC; see the file COPYING3.  If not see
    while (0)
  #endif
  

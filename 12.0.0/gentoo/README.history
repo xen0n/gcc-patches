@@ -1,3 +1,22 @@
+4		26 Mar 2022
+
+	U 01_all_default-fortify-source.patch
+	U 03_all_default-warn-trampolines.patch
+	U 05_all_alpha-mieee-default.patch
+	U 06_all_ia64_note.GNU-stack.patch
+	U 08_all_libiberty-pic.patch
+	U 09_all_nopie-all-flags.patch
+	U 10_all_sh-drop-sysroot-suffix.patch
+	U 11_all_ia64-TEXTREL.patch
+	U 12_all_disable-systemtap-switch.patch
+	- 13_all_m68k-textrel-on-libgcc.patch
+	U 14_all_respect-build-cxxflags.patch
+	U 20_all_libstdcxx-no-vtv.patch
+	U 22_all_default_ssp-buffer-size.patch
+	U 23_all_EXTRA_OPTIONS-z-now.patch
+	U 24_all_EXTRA_OPTIONS-fstack-clash-protection.patch
+	U 26_all_plugin-objdump.patch
+
 3		5 Feb 2022
 
 	U 01_all_default-fortify-source.patch

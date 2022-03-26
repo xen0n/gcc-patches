@@ -1,6 +1,6 @@
 --- a/libiberty/Makefile.in
 +++ b/libiberty/Makefile.in
-@@ -246,6 +246,7 @@ $(TARGETLIB): $(REQUIRED_OFILES) $(EXTRA_OFILES) $(LIBOBJS)
+@@ -265,6 +265,7 @@ $(TARGETLIB): $(REQUIRED_OFILES) $(EXTRA_OFILES) $(LIBOBJS)
  	  $(AR) $(AR_FLAGS) $(TARGETLIB) \
  	    $(REQUIRED_OFILES) $(EXTRA_OFILES) $(LIBOBJS); \
  	  $(RANLIB) $(TARGETLIB); \
