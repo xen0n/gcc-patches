@@ -95,7 +95,7 @@ echo " - BOUNDS:   ${HTB_GCC_VER}-${HTB_VER}"
 echo " - MAN:      ${MAN_VER}"
 
 rm -rf tmp
-rm -f gcc-${gver}-*.tar.bz2
+rm -f gcc-${gver}-*.tar.bz2 gcc-${gver}-*.tar.xz
 
 # standard jobbies
 mkdir -p tmp/patch/exclude tmp/musl tmp/piepatch tmp/specs
@@ -113,28 +113,28 @@ find tmp/ -name CVS -type d | xargs rm -rf
 
 # standard jobbies
 [[ -n ${PATCH_VER}  ]] && {
-tar -jcf gcc-${sgver}-patches-${PATCH_VER}.tar.bz2 \
+tar -jcf gcc-${sgver}-patches-${PATCH_VER}.tar.xz \
 	-C tmp patch || exit 1 ; }
 [[ -n ${MUSL_VER} ]] && {
-tar -jcf gcc-${sgver}-musl-patches-${MUSL_VER}.tar.bz2 \
+tar -jcf gcc-${sgver}-musl-patches-${MUSL_VER}.tar.xz \
 	-C tmp musl || exit 1 ; }
 [[ -n ${PIE_VER}    ]] && {
-tar -jcf gcc-${sgver}-piepatches-v${PIE_VER}.tar.bz2 \
+tar -jcf gcc-${sgver}-piepatches-v${PIE_VER}.tar.xz \
 	-C tmp piepatch || exit 1 ; }
 [[ -n ${SPECS_VER}  ]] && {
-tar -jcf gcc-${sgver}-specs-${SPECS_VER}.tar.bz2 \
+tar -jcf gcc-${sgver}-specs-${SPECS_VER}.tar.xz \
 	-C tmp specs || exit 1 ; }
 [[ -n ${PP_VER}     ]] && {
 mv tmp/ssp/protector.patch tmp/ssp/gcc-${gver}-ssp.patch
-tar -jcf gcc-${gver}-ssp-${PP_VER}.tar.bz2 \
+tar -jcf gcc-${gver}-ssp-${PP_VER}.tar.xz \
 	-C tmp ssp || exit 1 ; }
 [[ -d ${gver}/man   ]] && {
-tar -jcf gcc-${MAN_VER}-manpages.tar.bz2 \
+tar -jcf gcc-${MAN_VER}-manpages.tar.xz \
 	-C tmp/man . || exit 1 ; }
 # extra cruft
 [[ -n ${HTB_VER}    ]] && {
-bzip2 tmp/bounds-checking-*.patch \
-	&& cp tmp/bounds-checking-*.patch.bz2 . || exit 1 ; }
+xz tmp/bounds-checking-*.patch \
+	&& cp tmp/bounds-checking-*.patch.xz . || exit 1 ; }
 rm -rf tmp
 
-du -b *.bz2
+du -b *.xz
