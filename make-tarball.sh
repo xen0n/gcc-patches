@@ -113,23 +113,23 @@ find tmp/ -name CVS -type d | xargs rm -rf
 
 # standard jobbies
 [[ -n ${PATCH_VER}  ]] && {
-tar -Jcf gcc-${sgver}-patches-${PATCH_VER}.tar.xz \
+tar -acf gcc-${sgver}-patches-${PATCH_VER}.tar.xz \
 	-C tmp patch || exit 1 ; }
 [[ -n ${MUSL_VER} ]] && {
-tar -Jcf gcc-${sgver}-musl-patches-${MUSL_VER}.tar.xz \
+tar -acf gcc-${sgver}-musl-patches-${MUSL_VER}.tar.xz \
 	-C tmp musl || exit 1 ; }
 [[ -n ${PIE_VER}    ]] && {
-tar -Jcf gcc-${sgver}-piepatches-v${PIE_VER}.tar.xz \
+tar -acf gcc-${sgver}-piepatches-v${PIE_VER}.tar.xz \
 	-C tmp piepatch || exit 1 ; }
 [[ -n ${SPECS_VER}  ]] && {
-tar -Jcf gcc-${sgver}-specs-${SPECS_VER}.tar.xz \
+tar -acf gcc-${sgver}-specs-${SPECS_VER}.tar.xz \
 	-C tmp specs || exit 1 ; }
 [[ -n ${PP_VER}     ]] && {
 mv tmp/ssp/protector.patch tmp/ssp/gcc-${gver}-ssp.patch
-tar -Jcf gcc-${gver}-ssp-${PP_VER}.tar.xz \
+tar -acf gcc-${gver}-ssp-${PP_VER}.tar.xz \
 	-C tmp ssp || exit 1 ; }
 [[ -d ${gver}/man   ]] && {
-tar -Jcf gcc-${MAN_VER}-manpages.tar.xz \
+tar -acf gcc-${MAN_VER}-manpages.tar.xz \
 	-C tmp/man . || exit 1 ; }
 # extra cruft
 [[ -n ${HTB_VER}    ]] && {
