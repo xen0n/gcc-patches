@@ -38,7 +38,7 @@ index 3dcf7752b..c2049f117 100755
    --enable-maintainer-mode
                            enable make rules and dependencies not useful (and
                            sometimes confusing) to the casual installer
-@@ -31387,17 +31389,33 @@ fi
+@@ -31447,17 +31449,33 @@ fi
  
  # Test for <sys/sdt.h> on the target.
  
@@ -80,7 +80,7 @@ index 3dcf7752b..c2049f117 100755
  # Some glibc targets used DFmode long double, but with glibc 2.4
 --- a/gcc/configure.ac
 +++ b/gcc/configure.ac
-@@ -6904,14 +6904,28 @@ AC_SUBST([enable_default_ssp])
+@@ -6935,14 +6935,28 @@ AC_SUBST([enable_default_ssp])
  
  # Test for <sys/sdt.h> on the target.
  GCC_TARGET_TEMPLATE([HAVE_SYS_SDT_H])

@@ -1,3 +1,11 @@
+5		24 Apr 2022
+
+	U 02_all_default-warn-format-security.patch
+	U 10_all_sh-drop-sysroot-suffix.patch
+	U 12_all_disable-systemtap-switch.patch
+	U 20_all_libstdcxx-no-vtv.patch
+	U 26_all_plugin-objdump.patch
+
 4		26 Mar 2022
 
 	U 01_all_default-fortify-source.patch
